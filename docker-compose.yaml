@@ -1,6 +1,6 @@
 version: "2.23.3"
 services:
-  jsapi:
+  jsapi_i:
    build: ./jsApi-docker-sample
    container_name: jsapi_c
    ports:
@@ -8,3 +8,18 @@ services:
    volumes:
     - ./jsApi-docker-sample:/jsapi_sample
     - ${PWD}/jsapi_sample/node_modules
+   
+
+  viteblog_i:
+   build: ./reactBlog-docker-sample
+   container_name: viteblog_c
+   ports:
+    - '8080:8080'
+   volumes:
+    - ./reactBlog-docker-sample:/viteblog_sample
+    - ${PWD}/viteblog_sample/node_modules
+   stdin_open: true
+   tty: true
+   
+    
+
