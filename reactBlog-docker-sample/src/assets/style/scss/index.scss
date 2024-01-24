@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$primaryColor: #d04848;
+$textColor: #F8F4EC;
+.main-bg {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $primaryColor;
+  color: $textColor;
+}
